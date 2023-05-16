@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Amplangan." parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primarycolor</item>
+        <item name="colorSecondary">@color/secondcolor</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+</resources>
