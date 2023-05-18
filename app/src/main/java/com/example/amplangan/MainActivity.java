@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         masuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent resgisterIntent = new Intent(MainActivity.this, register.class);
+                Intent resgisterIntent = new Intent(MainActivity.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
             }
