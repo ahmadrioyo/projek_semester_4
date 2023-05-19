@@ -42,18 +42,20 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:src="@drawable/logo1"
-        android:layout_marginVertical="50dp"/>
+        android:layout_marginVertical="50dp"
+        android:src="@drawable/logo1" />
+
     <Button
         android:layout_width="140dp"
         android:layout_height="80dp"
-        android:text="Pesan"
         android:layout_gravity="center"
-        android:textAllCaps="false"
-        android:fontFamily="@font/poppinsregular"
-        android:textSize="25sp"
+        android:background="@drawable/button"
         android:drawableLeft="@drawable/pesan"
-        android:background="@drawable/button"/>
+        android:fontFamily="@font/poppinsregular"
+        android:text="Pesan"
+        android:textAllCaps="false"
+        android:textSize="25sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

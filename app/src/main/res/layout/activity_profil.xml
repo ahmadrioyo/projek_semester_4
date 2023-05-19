@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/profil"
+    tools:context=".home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/cross"
+            android:layout_weight="0.4"
+            android:layout_width="4dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:fontFamily="@font/poppinssemibold"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubah profil"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAllCaps="false"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.1"
+            android:src="@drawable/check" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginVertical="50dp"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Masukan Nama"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <EditText
+        android:id="@+id/editTextAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Masukan Alamat"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nomor_telepon"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"
+        />
+
+    <EditText
+        android:id="@+id/editTextNomorTelepon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Masukkan Nomor Telepon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Masukan Email"
+        />
+
+    <Button
+        android:background="@drawable/button1"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Simpan" />
+
+</LinearLayout>
+
