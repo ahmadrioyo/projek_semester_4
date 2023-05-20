@@ -36,7 +36,8 @@
             android:src="@drawable/profile"
             android:layout_weight="1"
             android:layout_width="20dp"
-            android:layout_height="50dp"/>
+            android:layout_height="50dp"
+            android:id="@+id/profil"/>
     </LinearLayout>
 
     <ImageView
