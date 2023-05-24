@@ -37,7 +37,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="175dp"
-        android:layout_marginVertical="25dp"
+        android:layout_marginVertical="50dp"
         android:src="@drawable/grop" />
 
 
