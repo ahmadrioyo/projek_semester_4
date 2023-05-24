@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/profil"
+    tools:context=".home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/back"
+            android:layout_weight="0.4"
+            android:layout_width="4dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Tentang Kami"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginVertical="25dp"
+        android:src="@drawable/grop" />
+
+
+    <TextView
+        android:id="@+id/judul1"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_below="@id/img_logo1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="UD. RAR CRACKERS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tulisan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\t    Didirikan pada tahun 2009,Perusahaan ini berkecimpung di bidang makanan ringan dengan memproduksi kerupuk amplang."
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_below="@id/judul1"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tulisan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\t    Perusahaan ini berdiri dengan inisiatif seorang ibu yang ingin memperbaiki keuangan keluarganya."
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_below="@id/tulisan1"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tulisan3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\t    UD. RAR Crackers memiliki banyak mitra kerja diantaranya Bahagia Bakery, Batavia Holland, dan Nelayan Sekitar."
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_below="@id/tulisan2"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tulisan4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- UD. RAR Crackers. since 2009 -"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_below="@id/tulisan3"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"/>
+
+</LinearLayout>
+
