@@ -8,15 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class daftarmenu extends AppCompatActivity {
-    ImageView backmn;
+    ImageView menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tentangkami);
-
-        backmn = (ImageView) findViewById(R.id.backmn);
-        backmn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_daftarmenu);
+        menu = (ImageView) findViewById(R.id.menub);
+        menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent resgisterIntent = new Intent(daftarmenu.this, home.class);
