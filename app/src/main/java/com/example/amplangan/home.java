@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class home extends AppCompatActivity {
     ImageView profil;
     ImageView riwayatpesanan;
+    ImageView menu;
     ImageView tentangkami;
 
     @Override
@@ -33,6 +34,16 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent resgisterIntent = new Intent(home.this, riwayatpesanan.class);
+                startActivity(resgisterIntent);
+                overridePendingTransition(0,0);
+            }
+        });
+
+        menu = (ImageView) findViewById(R.id.menu1);
+        menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resgisterIntent = new Intent(home.this, daftarmenu.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
             }
