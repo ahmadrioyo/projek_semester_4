@@ -2,6 +2,7 @@ package com.example.amplangan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class profil extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(profil.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
@@ -35,6 +37,7 @@ public class profil extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(profil.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
@@ -45,6 +48,7 @@ public class profil extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(profil.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 

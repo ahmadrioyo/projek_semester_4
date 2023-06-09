@@ -21,6 +21,7 @@ public class daftarmenu extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(daftarmenu.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
     }

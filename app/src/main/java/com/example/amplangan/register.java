@@ -34,6 +34,7 @@ public class register extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(register.this, MainActivity.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
     }

@@ -56,63 +56,100 @@
         android:text="Pesan"
         android:textAllCaps="false"
         android:textSize="25sp" />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"/>
+    <LinearLayout
+        android:id="@+id/riwayatpesanan"
+        android:padding="15dp"
+        android:elevation="3dp"
+        android:background="@color/white"
         android:orientation="horizontal"
-        android:layout_marginVertical="40dp">
-        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/menu1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsextra"
+            android:layout_marginLeft="15dp"
+            android:text="Riwayat"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/riwayatpesanan"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@drawable/menu2"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Riwayat Pesanan"
-                android:layout_gravity="center" />
-        </LinearLayout>
-        <LinearLayout
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Pesanan"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/menu1"
-                android:layout_width="60dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@drawable/menu1"/>
-            <TextView
-                android:id="@+id/daftarmenu"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Daftar Menu"
-                android:layout_gravity="center" />
-        </LinearLayout>
-        <LinearLayout
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    <LinearLayout
+        android:id="@+id/daftarmenu"
+        android:padding="15dp"
+        android:elevation="3dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/menu2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsextra"
+            android:layout_marginLeft="15dp"
+            android:text="Daftar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/tentangkami"
-                android:layout_width="60dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@drawable/menu3"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tentang Kami"
-                android:layout_gravity="center" />
-        </LinearLayout>
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+    <LinearLayout
+        android:id="@+id/tentangkami"
+        android:padding="15dp"
+        android:elevation="3dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/menu3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsextra"
+            android:layout_marginLeft="15dp"
+            android:text="Tentang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Kami"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>

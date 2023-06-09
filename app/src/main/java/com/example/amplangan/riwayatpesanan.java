@@ -22,6 +22,7 @@ public class riwayatpesanan extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(riwayatpesanan.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
     }

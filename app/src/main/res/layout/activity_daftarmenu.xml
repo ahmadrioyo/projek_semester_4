@@ -6,40 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/profil"
     tools:context=".home">
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:padding="20dp"
+        android:background="@color/primarycolor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/menub"
             android:src="@drawable/back"
-            android:layout_weight="0.4"
-            android:layout_width="4dp"
-            android:layout_height="30dp"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
 
         <TextView
-            android:layout_width="290dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
             android:fontFamily="@font/poppinssemibold"
             android:text="Daftar menu"
-            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="16sp" />
-
-    </LinearLayout>
+            android:textSize="18dp" />
+    </androidx.appcompat.widget.Toolbar>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="175dp"
-        android:layout_marginVertical="50dp"
-        android:src="@drawable/menu1" />
+        android:layout_marginVertical="30dp"
+        android:src="@drawable/menu2" />
 
     <TextView
         android:id="@+id/txt_1"
@@ -56,6 +51,7 @@
         android:textSize="16sp" />
 
     <LinearLayout
+        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

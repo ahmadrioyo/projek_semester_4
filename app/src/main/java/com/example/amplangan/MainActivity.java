@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(MainActivity.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(MainActivity.this, register.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 

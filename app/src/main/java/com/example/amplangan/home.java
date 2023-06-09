@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 public class home extends AppCompatActivity {
     ImageView profil;
-    ImageView riwayatpesanan;
-    ImageView menu;
-    ImageView tentangkami;
+
+    LinearLayout riwayatpesanan, daftarmenu, tentangkami;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,36 +26,40 @@ public class home extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(home.this, profil.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
-        riwayatpesanan = (ImageView) findViewById(R.id.riwayatpesanan);
+        riwayatpesanan = findViewById(R.id.riwayatpesanan);
         riwayatpesanan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent resgisterIntent = new Intent(home.this, riwayatpesanan.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
-        menu = (ImageView) findViewById(R.id.menu1);
-        menu.setOnClickListener(new View.OnClickListener() {
+        daftarmenu = findViewById(R.id.daftarmenu);
+        daftarmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent resgisterIntent = new Intent(home.this, daftarmenu.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
 
-        tentangkami = (ImageView) findViewById(R.id.tentangkami);
+        tentangkami = findViewById(R.id.tentangkami);
         tentangkami.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent resgisterIntent = new Intent(home.this, tentangkami.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
     }

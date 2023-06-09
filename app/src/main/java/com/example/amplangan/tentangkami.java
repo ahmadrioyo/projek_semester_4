@@ -22,6 +22,7 @@ public class tentangkami extends AppCompatActivity {
                 Intent resgisterIntent = new Intent(tentangkami.this, home.class);
                 startActivity(resgisterIntent);
                 overridePendingTransition(0,0);
+                finish();
             }
         });
     }
