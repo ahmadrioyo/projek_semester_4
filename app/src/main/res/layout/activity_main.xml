@@ -50,7 +50,7 @@
             android:paddingLeft="10dp"
             android:backgroundTint="@color/cream"
             android:textColor="@color/secondcolor"
-            android:id="@+id/edit_nama"
+            android:id="@+id/nama"
             android:fontFamily="@font/poppinsregular"/>
 
         <EditText
@@ -64,7 +64,8 @@
             android:paddingLeft="10dp"
             android:backgroundTint="@color/cream"
             android:textColor="@color/secondcolor"
-            android:id="@+id/edit_sandi"
+            android:id="@+id/sandi"
+            android:inputType="textPassword"
             android:fontFamily="@font/poppinsregular" />
 
     </LinearLayout>

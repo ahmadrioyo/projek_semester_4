@@ -2,4 +2,10 @@
     <!-- Base application theme. -->
     <style name="Theme.Amplangan" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
+    <style name="Theme.Amplangan.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Amplangan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Amplangan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

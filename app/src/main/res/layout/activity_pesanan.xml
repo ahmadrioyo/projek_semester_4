@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pesanan">
+    <androidx.appcompat.widget.Toolbar
+        android:padding="20dp"
+        android:background="@color/primarycolor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Pesanan"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"/>
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:text="Produk"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"/>
+
+        <EditText
+            android:id="@+id/editTextAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Masukan Jumlah Produk"
+            android:inputType="number"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            />
+        <EditText
+            android:id="@+id/editTextNomorTelepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:focusable="false"
+            android:inputType="none"
+            android:hint="Total harga"/>
+    </LinearLayout>
+    <Button
+        android:background="@drawable/button1"
+        android:id="@+id/simpan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Pesan" />
+</LinearLayout>
