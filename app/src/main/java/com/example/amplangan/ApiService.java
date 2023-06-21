@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -14,6 +15,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.amplangan.Model.Pesanan;
 import com.example.amplangan.Model.Stok;
 
 import org.json.JSONArray;
@@ -30,11 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ApiService {
-<<<<<<< Updated upstream
-    private static String HOST = "http://192.168.1.3:8000";
-=======
     private static String HOST = "http://192.168.1.151:8000";
->>>>>>> Stashed changes
     private static String API = HOST + "/api/";
     ProgressDialog progressDialog;
 
@@ -53,9 +51,19 @@ public class ApiService {
     }
 
     public interface ProductResponseListener {
-        void onSuccess(List<Stok> productList);
+        void onSuccess(List<Stok> stokList);
         void onError(String message);
     }
+    public interface PesananResponseListener {
+        void onSuccess(String response);
+        void onError(String message);
+    }
+
+    public interface ReadPesananResponseListener {
+        void onSuccess(List<Pesanan> pesananList);
+        void onError(String message);
+    }
+
 
     //register
     public static void register(Context context, String name, String password, String no_hp, String alamat, RegisterResponseListener listener) {
@@ -79,7 +87,21 @@ public class ApiService {
                 new Response.ErrorListener(){
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        if (error.networkResponse != null && error.networkResponse.data != null) {
+                            try {
+                                String responseBody = new String(error.networkResponse.data, "utf-8");
+                                JSONObject jsonObject = new JSONObject(responseBody);
+                                String message = jsonObject.getString("message");
+                                if (message.equals("Email sudah terdaftar")) {
+                                    listener.onError("Email sudah terdaftar , Silahkan gunakan email yang lain");
+                                }
+                            } catch (JSONException | UnsupportedEncodingException e) {
+                                e.printStackTrace();
+                                listener.onError("Gagal register: " + e.getMessage());
+                            }
+                        } else {
+                            listener.onError("Gagal register: network response is null");
+                        }
                     }
                 }) {
             @Override
@@ -165,7 +187,7 @@ public class ApiService {
     }
 
     //Stok
-    public static void stok(Context context,final ProductResponseListener listener) {
+    public static void Stok(Context context,final ProductResponseListener listener) {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API + "stok",
                 new Response.Listener<String>() {
                     @Override
@@ -175,7 +197,7 @@ public class ApiService {
                             String message = jsonObject.getString("message");
                             if (message.equals("success")) {
                                 JSONArray jsonArray = jsonObject.getJSONArray("data");
-                                List<Stok> productList = new ArrayList<>();
+                                List<Stok> stokList = new ArrayList<>();
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject productObj = jsonArray.getJSONObject(i);
                                     String id = productObj.getString("id");
@@ -199,10 +221,10 @@ public class ApiService {
                                     }
 
                                     Stok stok = new Stok(id, id_users, nama_produk, harga_produk, jumlah_produk, createAt, updateAt);
-                                    productList.add(stok);
+                                    stokList.add(stok);
 
                                 }
-                                listener.onSuccess(productList);
+                                listener.onSuccess(stokList);
                             }
                         } catch (JSONException e){
                             e.printStackTrace();
@@ -227,6 +249,120 @@ public class ApiService {
                         }
                     }
                 });
+        RequestQueue requestQueue = Volley.newRequestQueue(context);
+        requestQueue.add(stringRequest);
+    }
+    //masukan pesanan
+    public static void pesanan(Context context, String token, String jumlah,String id, String totalharga, final PesananResponseListener listener) {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, API + "pesanan",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String message = jsonObject.getString("message");
+                            if (message.equals("success")) {
+                                listener.onSuccess("Berhasil membuat nomor antrian");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            listener.onError("Invalid JSON response");
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (error.networkResponse != null && error.networkResponse.data != null) {
+                            try {
+                                String responseBody = new String(error.networkResponse.data, "utf-8");
+//                                JSONObject jsonObject = new JSONObject(responseBody);
+//                                String message = jsonObject.getString("message");
+                                listener.onError("gagal memesan");
+                            } catch ( UnsupportedEncodingException e) {
+                                e.printStackTrace();
+                                listener.onError("Failed to update photo: " + e.getMessage());
+                            }
+                        } else {
+                            listener.onError("Failed to update: network response is null");
+                        }
+                    }
+                }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + token);
+                return headers;
+            }
+
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("jumlah_pesanan", jumlah);
+                params.put("id_produk", id);
+                params.put("total_harga", totalharga);
+                return params;
+            }
+        };
+
+        Volley.newRequestQueue(context).add(stringRequest);
+    }
+    public static void readpesanan(Context context, String token, final ReadPesananResponseListener listener) {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, API + "pesanan-show",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String message = jsonObject.getString("message");
+                            if (message.equals("success")){
+                                JSONArray jsonArray = jsonObject.getJSONArray("data");
+                                List<Pesanan> pesananList = new ArrayList<>();
+                                for (int i = 0; i < jsonArray.length(); i++){
+                                    JSONObject dataObj = jsonArray.getJSONObject(i);
+                                    JSONObject userObj = dataObj.getJSONObject("users_mobile");
+                                    String id = dataObj.getString("id");
+                                    String jumlah = dataObj.getString("jumlah_pesanan");
+                                    String total = dataObj.getString("total_harga");
+                                    String name = userObj.getString("name");
+                                    String no_hp = userObj.getString("no_hp");
+                                    Pesanan pesanan = new Pesanan(id, jumlah,total,name, no_hp);
+                                    pesananList.add(pesanan);
+                                }
+                                listener.onSuccess(pesananList);
+                            }
+                        } catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (error.networkResponse != null && error.networkResponse.data != null) {
+                            try {
+                                String responseBody = new String(error.networkResponse.data, "utf-8");
+                                JSONObject jsonObject = new JSONObject(responseBody);
+                                String message = jsonObject.getString("message");
+                                listener.onError(message);
+                            } catch (JSONException | UnsupportedEncodingException e) {
+                                e.printStackTrace();
+                                listener.onError("Gagal mendapatkan data user: " + e.getMessage());
+                            }
+                        } else {
+                            listener.onError("Gagal mendapatkan data user: network response is null");
+                        }
+                    }
+                }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + token);
+                return headers;
+            }
+        };
+
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         requestQueue.add(stringRequest);
     }

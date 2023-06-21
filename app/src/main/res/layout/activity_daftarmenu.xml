@@ -36,60 +36,7 @@
         android:layout_marginVertical="30dp"
         android:src="@drawable/menu2" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-        <RelativeLayout
-            android:layout_gravity="center"
-            android:layout_width="60dp"
-            android:layout_height="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_logo1"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Nama Produk"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-        <RelativeLayout
-            android:layout_gravity="center"
-            android:layout_width="10dp"
-            android:layout_height="20dp"/>
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_logo1"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Harga"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-        <RelativeLayout
-            android:layout_gravity="center"
-            android:layout_width="10dp"
-            android:layout_height="20dp"/>
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/img_logo1"
-            android:layout_gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Jumlah"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,5 +95,9 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
 

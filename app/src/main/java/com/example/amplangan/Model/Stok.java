@@ -12,7 +12,7 @@ public class Stok implements Serializable {
     private Date createdAt;
     private Date updateAt;
 
-    public Stok(String id, String id_users, String nama_produk, String harga_produk, String jumlah_produk, Date createdAt, Date updateAt){
+    public Stok(String id, String id_users, String nama_produk, String harga_produk, String jumlah_produk, Date createdAt, Date updateAt) {
         this.id = id;
         this.id_users = id_users;
         this.nama_produk = nama_produk;
@@ -49,8 +49,4 @@ public class Stok implements Serializable {
     public Date getUpdateAt() {
         return updateAt;
     }
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

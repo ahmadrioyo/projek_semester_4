@@ -44,6 +44,7 @@
             android:textColor="@color/black"
             android:fontFamily="@font/poppinssemibold"/>
         <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
         <RelativeLayout
@@ -74,11 +75,12 @@
             android:fontFamily="@font/poppinssemibold"
             />
         <EditText
-            android:id="@+id/editTextNomorTelepon"
+            android:id="@+id/editTextTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:focusable="false"
+            android:clickable="false"
             android:inputType="none"
             android:hint="Total harga"/>
     </LinearLayout>

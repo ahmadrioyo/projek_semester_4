@@ -2,22 +2,15 @@ package com.example.amplangan.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-<<<<<<< Updated upstream
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-=======
-import android.os.Build;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
->>>>>>> Stashed changes
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.amplangan.ApiService;
 import com.example.amplangan.Model.Stok;
 import com.example.amplangan.R;
 import com.example.amplangan.daftarmenu;
@@ -30,8 +23,8 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
     private List<Stok> stokList;
     private Context context;
 
-    public StokAdapter(List<Stok> productList, Context context){
-        this.stokList = productList;
+    public StokAdapter(List<Stok> stokList, Context context){
+        this.stokList = stokList;
         this.context = context;
     }
 
@@ -44,22 +37,11 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
 
     @Override
     public void onBindViewHolder(@NonNull StokAdapter.VH holder, int position) {
-<<<<<<< Updated upstream
-        Stok product = stokList.get(position);
-        if (product == null) {
-            holder.price.setText(stokList.get(position).getNama_produk());
-            holder.jumlah.setText(stokList.get(position).getHarga_produk());
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
-            String formattedDate = dateFormat.format(stokList.get(position).getCreatedAt());
-            holder.date.setText(formattedDate);
-=======
         Stok stok = stokList.get(position);
         if (stok == null) {
             holder.nama_produk.setText(stokList.get(position).getNama_produk());
             holder.harga_produk.setText(stokList.get(position).getHarga_produk());
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
-            String formattedDate = dateFormat.format(stokList.get(position).getCreatedAt());
->>>>>>> Stashed changes
+            holder.jumlah_produk.setText(stokList.get(position).getJumlah_produk());
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,41 +58,19 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
 
     @Override
     public int getItemCount() {
-<<<<<<< Updated upstream
-        return productList.size() == 0 ? 0:productList.size();
-    }
-
-    public class VH extends RecyclerView.ViewHolder{
-        ImageView logo,img;
-        TextView price,jumlah,date,name,desc;
-        public VH(@NonNull View itemView){
-            super(itemView);
-            logo = itemView.findViewById(R.id.logo);
-            img = itemView.findViewById(R.id.pimage);
-            price = itemView.findViewById(R.id.pprice);
-            jumlah = itemView.findViewById(R.id.pjumlah);
-            date = itemView.findViewById(R.id.ptanggal);
-            name = itemView.findViewById(R.id.pname);
-            desc = itemView.findViewById(R.id.pdesc);
-
-            desc.setMaxLines(1);
-            desc.setEllipsize(TextUtils.TruncateAt.END);
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                logo.setBackgroundResource(R.drawable.bg_logo);
-            }
-=======
         return stokList.size() == 0 ? 0:stokList.size();
     }
 
     public class VH extends RecyclerView.ViewHolder{
-        TextView nama_produk,harga_produk,jumlah_produk;
+        TextView nama_produk,harga_produk,jumlah_produk, desc;
         public VH(@NonNull View itemView){
             super(itemView);
             nama_produk = itemView.findViewById(R.id.produk);
             harga_produk = itemView.findViewById(R.id.harga);
             jumlah_produk = itemView.findViewById(R.id.jumlah);
->>>>>>> Stashed changes
+
+            desc.setMaxLines(1);
+            desc.setEllipsize(TextUtils.TruncateAt.END);
         }
     }
 
