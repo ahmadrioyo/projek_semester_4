@@ -30,7 +30,11 @@ import java.util.List;
 import java.util.Map;
 
 public class ApiService {
+<<<<<<< Updated upstream
     private static String HOST = "http://192.168.1.3:8000";
+=======
+    private static String HOST = "http://192.168.1.151:8000";
+>>>>>>> Stashed changes
     private static String API = HOST + "/api/";
     ProgressDialog progressDialog;
 

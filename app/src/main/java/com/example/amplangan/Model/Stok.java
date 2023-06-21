@@ -49,4 +49,8 @@ public class Stok implements Serializable {
     public Date getUpdateAt() {
         return updateAt;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

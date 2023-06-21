@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ackage com.example.amplangan;
+=======
+package com.example.amplangan;
+>>>>>>> Stashed changes
 
 import android.content.Context;
 
@@ -6,7 +10,11 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+<<<<<<< Updated upstream
 public class VollpeyConnection {
+=======
+public class VolleyConnection {
+>>>>>>> Stashed changes
 
     private static VolleyConnection vInstance;
     private RequestQueue requestQueue;
@@ -34,4 +42,8 @@ public class VollpeyConnection {
     public<T> void addToRequestQue(Request<T> request){
         getRequestQueue().add(request);
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

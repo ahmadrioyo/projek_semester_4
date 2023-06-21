@@ -34,4 +34,8 @@ public class User {
     public String getNo_hp() {
         return no_hp;
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

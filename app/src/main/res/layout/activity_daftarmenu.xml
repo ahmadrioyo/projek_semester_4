@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".home">
+    tools:context=".daftarmenu">
     <androidx.appcompat.widget.Toolbar
         android:padding="20dp"
         android:background="@color/primarycolor"
@@ -36,46 +36,117 @@
         android:layout_marginVertical="30dp"
         android:src="@drawable/menu2" />
 
-    <TextView
-        android:id="@+id/txt_1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img_logo1"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="Nama Produk"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Nama Produk"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Harga"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Jumlah"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
 
     <LinearLayout
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="92dp"
+            android:layout_width="81dp"
             android:layout_height="81dp"
             android:src="@drawable/logo1" />
-
         <TextView
-            android:layout_width="252dp"
-            android:layout_height="27dp"
+            android:id="@+id/produk"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/poppinssemibold"
-            android:text="Amplang Original"
-            android:textAllCaps="false"
+            android:text="produk"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="16sp" />
-
-
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Harga"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="10dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:id="@+id/jumlah"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Jumlah"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
     </LinearLayout>
-
-
-
 </LinearLayout>
 

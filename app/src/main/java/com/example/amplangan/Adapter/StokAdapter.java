@@ -2,9 +2,17 @@ package com.example.amplangan.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< Updated upstream
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+=======
+import android.os.Build;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+>>>>>>> Stashed changes
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +44,7 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
 
     @Override
     public void onBindViewHolder(@NonNull StokAdapter.VH holder, int position) {
+<<<<<<< Updated upstream
         Stok product = stokList.get(position);
         if (product == null) {
             holder.price.setText(stokList.get(position).getNama_produk());
@@ -43,6 +52,14 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
             String formattedDate = dateFormat.format(stokList.get(position).getCreatedAt());
             holder.date.setText(formattedDate);
+=======
+        Stok stok = stokList.get(position);
+        if (stok == null) {
+            holder.nama_produk.setText(stokList.get(position).getNama_produk());
+            holder.harga_produk.setText(stokList.get(position).getHarga_produk());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+            String formattedDate = dateFormat.format(stokList.get(position).getCreatedAt());
+>>>>>>> Stashed changes
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -59,6 +76,7 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
 
     @Override
     public int getItemCount() {
+<<<<<<< Updated upstream
         return productList.size() == 0 ? 0:productList.size();
     }
 
@@ -81,6 +99,18 @@ public class StokAdapter extends RecyclerView.Adapter<StokAdapter.VH> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 logo.setBackgroundResource(R.drawable.bg_logo);
             }
+=======
+        return stokList.size() == 0 ? 0:stokList.size();
+    }
+
+    public class VH extends RecyclerView.ViewHolder{
+        TextView nama_produk,harga_produk,jumlah_produk;
+        public VH(@NonNull View itemView){
+            super(itemView);
+            nama_produk = itemView.findViewById(R.id.produk);
+            harga_produk = itemView.findViewById(R.id.harga);
+            jumlah_produk = itemView.findViewById(R.id.jumlah);
+>>>>>>> Stashed changes
         }
     }
 
